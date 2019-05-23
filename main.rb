@@ -1,4 +1,4 @@
-load_paths = Dir["/vendor/bundle/ruby/2.4.0/gems/**/lib"]
+load_paths = Dir["/vendor/bundle/ruby/2.5.0/gems/**/lib"]
 $LOAD_PATH.unshift(*load_paths)
 
 require 'line/bot'
