@@ -1,3 +1,6 @@
+load_paths = Dir["/vendor/bundle/ruby/2.4.0/gems/**/lib"]
+$LOAD_PATH.unshift(*load_paths)
+
 require 'line/bot'
 require 'dotenv'
 require 'net/http'
