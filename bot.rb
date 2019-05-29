@@ -35,7 +35,7 @@ def lambda_handler(event:, context:)
         text: '直近一週間の島根県でのIT勉強会です'
     }
 
-    response = client.push_message(ENV["LINE_USER_ID"], info_message)
+    response = client.broadcast(info_message)
 
     events.each do |event|
         message = {
@@ -43,7 +43,7 @@ def lambda_handler(event:, context:)
             text: "#{event["title"]} #{event["event_url"]}"
         }
 
-        response = client.push_message(ENV["LINE_USER_ID"], message)
+        response = client.broadcast(message)
         p response
     end
 end
